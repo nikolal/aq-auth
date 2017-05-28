@@ -10,6 +10,8 @@ import {
   TouchableOpacity
 } from 'react-native'
 
+import Inputs from './Inputs.js'
+
 const Register = () => {
   return (
     <View style={styles.container}>
@@ -22,20 +24,9 @@ const Register = () => {
         <Text style={styles.textRegister}>Register</Text>
         <Text style={styles.descriptionext}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Eum delectus incidunt at, cum, hic sed soluta saepe ut exercitationem earum
+          Eum delectus incidunt at.
         </Text>
-        <TextInput
-          style={styles.input}
-          underlineColorAndroid="transparent"
-          autoCorerrect={false}
-          autoCapitalize="none"
-        />
-        <TextInput
-          style={styles.input}
-          underlineColorAndroid="transparent"
-          autoCorerrect={false}
-          autoCapitalize="none"
-        />
+        <Inputs />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
