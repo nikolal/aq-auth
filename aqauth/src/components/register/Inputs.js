@@ -1,25 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 
-class Inputs extends Component {
+const Inputs = ({ state, updateInputValue }) => {
 
-  state = {
-    inputs:[
-      {  key: 0, type: 'username', placeholder: 'Username', value: '', error: 'Username must be longer then 3 characters'},
-      {  key: 1, type: 'email', placeholder: 'Email', value: '', error: 'Invalid Email'},
-      {  key: 2, type: 'password', placeholder: 'Password', value: '', error: 'Password must be longer then 5 characters'},
-    ],
-    showError: false
-  }
+    const { inputs, showError } = state
 
-  updateInputValue = (key, text, state) => {
-    const newInputs = state.inputs.slice()
-    newInputs[key].value = text
-    this.setState({ inputs: newInputs })
-  }
-
-  render() {
-    const { inputs, showError } = this.state
     return(
       <View>
         {
@@ -35,7 +20,7 @@ class Inputs extends Component {
                   underlineColorAndroid="transparent"
                   autoCorerrect={false}
                   autoCapitalize="none"
-                  onChangeText={(text) => this.updateInputValue(item.key, text, this.state)}
+                  onChangeText={(text) => updateInputValue(item.key, text, state)}
                 />
                 {
                   item.value.length < 4 && item.type === 'username' && showError === true && <Text style={styles.error}>{item.error}</Text>
@@ -50,7 +35,6 @@ class Inputs extends Component {
       </View>
     )
   }
-}
 
 export default Inputs
 
