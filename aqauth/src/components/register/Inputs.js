@@ -4,7 +4,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native'
 const Inputs = ({ state, updateInputValue }) => {
 
     const { inputs, showError } = state
-
+    console.log(showError)
     return(
       <View>
         {

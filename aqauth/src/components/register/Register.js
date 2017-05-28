@@ -30,6 +30,10 @@ class Register extends Component {
     console.log(this.state)
   }
 
+  submit = () => {
+    this.setState({ showError: true })
+  }
+
   render(){
     return (
       <View style={styles.container}>
@@ -52,7 +56,9 @@ class Register extends Component {
             updateInputValue={this.updateInputValue}
           />
 
-          <Submit />
+          <Submit 
+            submit={this.submit}
+          />
 
           <View style={styles.bottomTextContainer}>
             <TouchableOpacity>
