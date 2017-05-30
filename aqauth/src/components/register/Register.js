@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 
 import Inputs from './Inputs.js'
-import Submit from './Submit.js'
+import ButtonSubmit from '../common/ButtonSubmit.js'
 
 class Register extends Component {
 
@@ -56,8 +56,9 @@ class Register extends Component {
             updateInputValue={this.updateInputValue}
           />
 
-          <Submit 
-            submit={this.submit}
+          <ButtonSubmit 
+            onPress={() => this.submit()}
+            text='Register'
           />
 
           <View style={styles.bottomTextContainer}>

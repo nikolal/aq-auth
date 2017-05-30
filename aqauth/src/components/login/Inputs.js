@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 
+import InputAuth from '../common/InputAuth.js'
+
 const Inputs = ({ state, updateInputValue }) => {
 
     const { inputs, showError } = state
@@ -10,15 +12,10 @@ const Inputs = ({ state, updateInputValue }) => {
           inputs.map((item, index) => {
             return(
               <View key={item.key}>
-                <TextInput
-                  style={styles.input}
+                <InputAuth
                   placeholder={item.placeholder}
-                  placeholderTextColor='white'
                   value={item.value}
                   secureTextEntry={item.type === 'password' ? true : false}
-                  underlineColorAndroid="transparent"
-                  autoCorerrect={false}
-                  autoCapitalize="none"
                   onChangeText={(text) => updateInputValue(item.key, text, state)}
                 />
                 {
@@ -35,16 +32,6 @@ const Inputs = ({ state, updateInputValue }) => {
 export default Inputs
 
 const styles = StyleSheet.create({
-  input: {
-    textAlign: 'center',
-    height: 40,
-    borderWidth: 2,
-    borderColor: 'white',
-    fontSize: 20,
-    color: 'white',
-    borderRadius: 50,
-    marginTop: 10
-  },
   error: {
     color: 'red',
   }

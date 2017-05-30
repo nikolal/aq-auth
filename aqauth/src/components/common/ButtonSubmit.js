@@ -6,13 +6,13 @@ import {
   TouchableOpacity
 } from 'react-native'
 
-const Submit = ({ submit }) => {
+const Submit = ({ onPress, text }) => {
   return(
     <TouchableOpacity 
       style={styles.button}
-      onPress={() => submit()}
+      onPress={onPress}
     >
-      <Text style={styles.buttonText}>Submit</Text>
+      <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   )
 }

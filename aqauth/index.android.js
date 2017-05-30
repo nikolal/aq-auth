@@ -19,7 +19,7 @@ export default class aqauth extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Register />
+        <Login />
       </View>
     )
   }
