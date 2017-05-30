@@ -14,12 +14,13 @@ import {
 
 import Register from './src/components/register/Register.js'
 import Login from './src/components/login/Login.js'
+import ForgotPassword from './src/components/forgotPassword/ForgotPassword.js'
 
 export default class aqauth extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Login />
+        <ForgotPassword />
       </View>
     )
   }

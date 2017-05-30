@@ -39,7 +39,7 @@ class Register extends Component {
       <View style={styles.container}>
         <Image
           style={styles.image}
-          source={require('./background.jpeg')}
+          source={require('../../../assets/images/background.jpeg')}
           resizeMode='cover'
         />
 
