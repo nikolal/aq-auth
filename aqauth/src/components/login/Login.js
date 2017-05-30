@@ -12,13 +12,12 @@ import {
 import Inputs from './Inputs.js'
 import Submit from './Submit.js'
 
-class Register extends Component {
+class Login extends Component {
 
   state = {
     inputs:[
-      {  key: 0, type: 'username', placeholder: 'Username', value: '', error: 'Username must be longer then 3 characters'},
-      {  key: 1, type: 'email', placeholder: 'Email', value: '', error: 'Invalid Email'},
-      {  key: 2, type: 'password', placeholder: 'Password', value: '', error: 'Password must be longer then 5 characters'},
+      {  key: 0, type: 'email', placeholder: 'Email', value: '', error: 'Invalid Email'},
+      {  key: 1, type: 'password', placeholder: 'Password', value: '', error: 'Password must be longer then 5 characters'},
     ],
     showError: false
   }
@@ -44,7 +43,7 @@ class Register extends Component {
         />
 
         <View style={styles.containerText}>
-          <Text style={styles.textRegister}>Register</Text>
+          <Text style={styles.textLogin}>Login</Text>
 
           <Text style={styles.descriptionext}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -62,15 +61,21 @@ class Register extends Component {
 
           <View style={styles.bottomTextContainer}>
             <TouchableOpacity>
-              <Text style={styles.bottomText}>Go to Login</Text>
+              <Text style={styles.bottomText}>Go to Register</Text>
             </TouchableOpacity>
+
+            <Text style={styles.bottomText}>|</Text>
+            <TouchableOpacity>
+              <Text style={styles.bottomText}>Forgot Pasword</Text>
+            </TouchableOpacity>
+
           </View>
         </View>
       </View>
     )
   }
 }
-export default Register
+export default Login
 
 const {width, height} = Dimensions.get('window')
 
@@ -91,7 +96,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingBottom: 150
   },
-  textRegister: {
+  textLogin: {
     alignSelf: 'center',
     color: 'white',
     fontSize: 40,

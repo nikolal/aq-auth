@@ -13,6 +13,7 @@ import {
 } from 'react-native'
 
 import Register from './src/components/register/Register.js'
+import Login from './src/components/login/Login.js'
 
 export default class aqauth extends Component {
   render() {
