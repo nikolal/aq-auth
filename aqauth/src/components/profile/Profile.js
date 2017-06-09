@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   Image,
   Dimensions,
   TouchableOpacity
@@ -29,7 +30,7 @@ class Profile extends Component {
    const { items } = this.state
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
 
         <Image
           style={styles.image}
@@ -38,7 +39,7 @@ class Profile extends Component {
           blurRadius={0.5}
         />
 
-        <View style={styles.containerText}>
+        <View style={styles.innerContainer}>
 
           <Image
             style={styles.imageAvatar}
@@ -52,7 +53,7 @@ class Profile extends Component {
 
         </View>
 
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -68,10 +69,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'purple',
     opacity: 0.8,
   },
-  containerText: {
-    width: width,
+  innerContainer: {
+    justifyContent: 'space-around',
     height: height,
+    width: width,
     position: 'absolute',
+    alignItems: 'center',
   },
   imageAvatar: {
     height: 100,

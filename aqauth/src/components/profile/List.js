@@ -2,9 +2,9 @@ import React from 'react'
 import {
   StyleSheet,
   Text,
-  View,
   Image,
-  ScrollView,
+  View,
+  Dimensions,
   TouchableOpacity
 } from 'react-native'
 
@@ -12,33 +12,52 @@ const List = ({ items }) => {
 
     return (
 
-      <ScrollView>
+      <View
+        style={styles.list}
+      >
         {
           items.map((item, index) => {
             return(
               <View 
-                style={styles.listContainer}
+                style={styles.itemContainer}
                 key={item.key}
               >
                 <Image
+                  style={styles.itemImage}
                   source={item.iconURL}
                 />
-                <Text>
+                <Text style={styles.itemText}>
                   {item.value}
                 </Text>
               </View>
             )
           })
         }
-      </ScrollView>
+      </View>
     )
   }
 export default List
 
+const {width, height} = Dimensions.get('window')
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  list: {
+    width: width,
   },
-  listContainer: {
+  itemContainer: {
+    flexDirection: 'row',
+    padding: 10,
+    backgroundColor: '#61aa7c',
+    borderBottomColor: '#1a3022',
+    borderBottomWidth: 1
+  },
+  itemImage: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+  },
+  itemText: {
+    color: 'white',
+    fontSize: 20
   }
 })
