@@ -52,6 +52,7 @@ class ForgotPassword extends Component {
           <Inputs 
             state={this.state}
             updateInputValue={this.updateInputValue}
+            keyboardType={'email-address'}
           />
 
           <ButtonSubmit 
