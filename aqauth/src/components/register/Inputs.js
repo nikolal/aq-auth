@@ -1,17 +1,17 @@
-import React, { Component, PropTypes } from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-import InputAuth from '../common/InputAuth.js'
+import InputAuth from '../common/InputAuth.js';
 
 const Inputs = ({ state, updateInputValue }) => {
 
-    const { inputs, showError } = state
-    console.log(showError)
-    return(
+    const { inputs, showError } = state;
+    console.log(showError);
+    return (
       <View>
         {
           inputs.map((item, index) => {
-            return(
+            return (
               <View key={item.key}>
                 <InputAuth
                   placeholder={item.placeholder}
@@ -26,17 +26,17 @@ const Inputs = ({ state, updateInputValue }) => {
                   item.value.length < 6 && item.type === 'password' && showError === true && <Text style={styles.error}>{item.error}</Text>
                 }
               </View>
-            )
+            );
           })
         }
       </View>
-    )
-  }
+    );
+  };
 
-export default Inputs
+export default Inputs;
 
 const styles = StyleSheet.create({
   error: {
     color: 'red',
   }
-})
+});

@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 import {
   StyleSheet,
   Text,
   Image,
   View,
   Dimensions,
-  TouchableOpacity
-} from 'react-native'
+} from 'react-native';
 
 const List = ({ items }) => {
 
@@ -17,8 +16,8 @@ const List = ({ items }) => {
       >
         {
           items.map((item, index) => {
-            return(
-              <View 
+            return (
+              <View
                 style={styles.itemContainer}
                 key={item.key}
               >
@@ -30,15 +29,15 @@ const List = ({ items }) => {
                   {item.value}
                 </Text>
               </View>
-            )
+            );
           })
         }
       </View>
-    )
-  }
-export default List
+    );
+  };
+export default List;
 
-const {width, height} = Dimensions.get('window')
+const {width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   list: {
@@ -60,4 +59,4 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20
   }
-})
+});

@@ -1,23 +1,22 @@
-import React from 'react'
+import React from 'react';
 import {
   StyleSheet,
   Text,
-  Button,
   TouchableOpacity
-} from 'react-native'
+} from 'react-native';
 
 const Submit = ({ onPress, text }) => {
-  return(
-    <TouchableOpacity 
+  return (
+    <TouchableOpacity
       style={styles.button}
       onPress={onPress}
     >
       <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default Submit
+export default Submit;
 
 const styles = StyleSheet.create({
   button: {
@@ -31,5 +30,6 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center'
   },
-})
+});
+
 

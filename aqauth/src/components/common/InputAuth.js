@@ -1,12 +1,12 @@
-import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import {TextInput, StyleSheet } from 'react-native';
 
 const InputAuth = ({ placeholder, value, secureTextEntry, onChangeText}) => {
-  return(
+  return (
     <TextInput
       style={styles.input}
       placeholder={placeholder}
-      placeholderTextColor='white'
+      placeholderTextColor="white"
       value={value}
       secureTextEntry={secureTextEntry}
       underlineColorAndroid="transparent"
@@ -14,10 +14,10 @@ const InputAuth = ({ placeholder, value, secureTextEntry, onChangeText}) => {
       autoCapitalize="none"
       onChangeText={onChangeText}
     />
-  )
-}
+  );
+};
 
-export default InputAuth
+export default InputAuth;
 
 const styles = StyleSheet.create({
   input: {
@@ -30,4 +30,5 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginTop: 10
   }
-})
+});
+

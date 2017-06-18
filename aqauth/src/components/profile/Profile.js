@@ -1,4 +1,4 @@
-import React, { Component }from 'react'
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,28 +6,27 @@ import {
   ScrollView,
   Image,
   Dimensions,
-  TouchableOpacity
-} from 'react-native'
+} from 'react-native';
 
-import List from './List.js'
+import List from './List.js';
 
 
 class Profile extends Component {
 
   state = {
     items: [
-      {'value': 'Item1', 'key': 0, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item2', 'key': 1, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item3', 'key': 2, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item4', 'key': 3, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item5', 'key': 4, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item6', 'key': 5, iconURL: require("../../../assets/images/avatar.jpg")},
-      {'value': 'Item7', 'key': 6, iconURL: require("../../../assets/images/avatar.jpg")},
+      {'value': 'Item1', 'key': 0, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item2', 'key': 1, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item3', 'key': 2, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item4', 'key': 3, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item5', 'key': 4, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item6', 'key': 5, iconURL: require('../../../assets/images/avatar.jpg')},
+      {'value': 'Item7', 'key': 6, iconURL: require('../../../assets/images/avatar.jpg')},
     ]
   }
 
   render(){
-   const { items } = this.state
+   const { items } = this.state;
 
     return (
       <ScrollView style={styles.container}>
@@ -35,7 +34,7 @@ class Profile extends Component {
         <Image
           style={styles.image}
           source={require('../../../assets/images/background.jpeg')}
-          resizeMode='cover'
+          resizeMode="cover"
           blurRadius={0.5}
         />
 
@@ -47,19 +46,19 @@ class Profile extends Component {
           />
           <Text style={styles.username}>Username</Text>
 
-          <List 
+          <List
             items = {items}
           />
 
         </View>
 
       </ScrollView>
-    )
+    );
   }
 }
-export default Profile
+export default Profile;
 
-const {width, height} = Dimensions.get('window')
+const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -85,4 +84,4 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 25
   }
-})
+});
